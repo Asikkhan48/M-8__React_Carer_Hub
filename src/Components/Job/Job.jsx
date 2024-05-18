@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+
+
 
 const Job = ({job}) => {
 
@@ -8,12 +12,12 @@ const Job = ({job}) => {
             <img src={logo} alt="" />
             <h1>{job_title}</h1>
             <p>{company_name}</p>
-            <p>{location}</p>
+            <p> {location}</p>
             <p>{salary}</p>
             <p>{job_description}</p>
             <p>{job_responsibility}</p>
             <p>{address}</p>
-            <button>See more</button>
+            <Link to={`/job/${id}`}><button className="btn btn-secondary">See more</button></Link>
         </div>
     );
 };
